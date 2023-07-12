@@ -1,16 +1,27 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
   return (
-    <div className=" flex flex-col gap-2 p-6 text-center text-xs">
+    <footer className=" flex flex-col gap-2 p-4 text-center text-sm md:p-6">
       <div className="flex items-center justify-center gap-3">
-        <a href="">
-          <GitHubLogoIcon />
+        <a
+          href="https://github.com/newman-afk/blog"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GitHubLogoIcon className=" h-6 w-6" />
         </a>
       </div>
-      <p>Rust • © 2023 • Rust Blog</p>
-      <p>Tailwind Nextjs Theme</p>
-    </div>
+      <p>Rust • © {currentYear} • Rust Blog</p>
+      <a
+        href="https://github.com/timlrx/tailwind-nextjs-starter-blog"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Tailwind Nextjs Theme
+      </a>
+    </footer>
   )
 }
 

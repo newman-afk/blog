@@ -9,7 +9,7 @@ import Layout from './components/Layout'
 function App() {
   return (
     <>
-      <div className="container bg-background">
+      <div className="container flex min-h-screen flex-col overflow-x-hidden bg-background">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
